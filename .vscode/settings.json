@@ -1,0 +1,8 @@
+{/* EMMET */
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+}
