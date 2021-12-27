@@ -1,8 +1,15 @@
+import {Status, Avatar, Name} from './FriendListItem.styled'
+
 const FriendListItem = ({ avatar, name, isOnline }) => (
   <>
-    <span class="status">{isOnline}</span>
-    <img class="avatar" src={avatar} alt="User avatar" width="48" />
-    <p class="name">{name}</p>
+    <Status style={{
+      backgroundColor:
+        isOnline
+        ? 'green'
+        : 'tomato'
+    }}></Status>
+    <Avatar src={avatar} alt="User avatar" width="55" />
+    <Name class="name">{name}</Name>
   </>
 );
 
