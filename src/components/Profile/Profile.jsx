@@ -1,4 +1,4 @@
-import {ProfileContainer, Description, Avatar, Name, Text, Stats, StatsItem, Quantity, LabelEl, QuantityEl} from './Profile.styled'
+import {ProfileContainer,  Avatar, Name, Text, Stats, StatsItem,  LabelEl, QuantityEl} from './Profile.styled'
 
 const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes} }) => (
   <ProfileContainer>
