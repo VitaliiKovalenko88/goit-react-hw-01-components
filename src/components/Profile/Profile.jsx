@@ -1,27 +1,31 @@
-const Profile = ({ username, tag, location, avatar, stats }) => (
-  <div className="profile">
-    <div className="description">
-      <img src={avatar} alt="User avatar" className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">{tag}</p>
-      <p className="location">{location}</p>
+import {ProfileContainer, Description, Avatar, Name, Text, Stats, StatsItem, Quantity, LabelEl, QuantityEl} from './Profile.styled'
+
+const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes} }) => (
+  <ProfileContainer>
+    <div>
+      <Avatar src={avatar} alt="User avatar" 
+      
+       />
+      <Name>{username}</Name>
+      <Text>@{tag}</Text>
+      <Text>{location}</Text>
     </div>
 
-    <ul className="stats">
-      <li>
-        <span className="label">Followers </span>
-        <span className="quantity"> {stats.followers}</span>
-      </li>
-      <li>
-        <span className="label">Views </span>
-        <span className="quantity">{stats.views}</span>
-      </li>
-      <li>
-        <span className="label">Likes </span>
-        <span className="quantity">{stats.likes}</span>
-      </li>
-    </ul>
-  </div>
+    <Stats>
+      <StatsItem>
+        <LabelEl>Followers</LabelEl>
+        <QuantityEl>{followers}</QuantityEl>
+      </StatsItem>
+      <StatsItem>
+        <LabelEl>Views</LabelEl>
+        <QuantityEl>{views}</QuantityEl>
+      </StatsItem>
+      <StatsItem>
+        <LabelEl>Likes</LabelEl>
+        <QuantityEl>{likes}</QuantityEl>
+      </StatsItem>
+    </Stats>
+  </ProfileContainer>
 );
 
 export default Profile;
