@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import { StatisticsCard, Title, StatList, Item } from "./Statistics.styled";
-
 const Statistics = ({ title, stats }) => (
   <StatisticsCard>
     {title && <Title>{title}</Title>}
@@ -18,7 +17,7 @@ const Statistics = ({ title, stats }) => (
 export default Statistics;
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+ 
   stats: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
