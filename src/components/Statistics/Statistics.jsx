@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types'
 import { StatisticsCard, Title, StatList, Item } from "./Statistics.styled";
 
 const Statistics = ({ title, stats }) => (
   <StatisticsCard>
     {title && <Title>{title}</Title>}
     <StatList>
-      {stats.map(stat => (
-        <Item key={stat.id}>
-          <span>{stat.label}</span>
-          <span>{stat.percentage}%</span>
+      {stats.map(({id, label, percentage }) => (
+        <Item key={id}>
+          <span>{label}</span>
+          <span>{percentage}%</span>
         </Item>
       ))}
     </StatList>
@@ -15,3 +16,12 @@ const Statistics = ({ title, stats }) => (
 );
 
 export default Statistics;
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired
+  }).isRequired).isRequired
+}
