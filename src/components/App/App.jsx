@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import user from '../../data/user.json';
 import data from '../../data/data.json';
 import friends from '../../data/friends.json';
@@ -8,7 +9,7 @@ import Statistics from '../Statistics/Statistics';
 import FriendList from '../FriendList/FriendList';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
 
-const {avatar, username, tag, stats, location}=user 
+const { avatar, username, tag, stats, location } = user;
 
 const App = () => (
   <Container>
@@ -19,10 +20,10 @@ const App = () => (
       stats={stats}
       location={location}
     />
-    <Statistics title="Upload stats" stats={data}/>
-    <Statistics stats={data}/>
-    <FriendList friends={friends}/>
-    <TransactionHistory items={transactions}/>
+    <Statistics title="Upload stats" stats={data} />
+    <Statistics stats={data} />
+    <FriendList friends={friends} />
+    <TransactionHistory items={transactions} />
   </Container>
 );
 
