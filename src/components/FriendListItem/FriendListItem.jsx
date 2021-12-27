@@ -9,7 +9,7 @@ const FriendListItem = ({ avatar, name, isOnline }) => (
         : 'tomato'
     }}></Status>
     <Avatar src={avatar} alt="User avatar" width="55" />
-    <Name class="name">{name}</Name>
+    <Name>{name}</Name>
   </>
 );
 
