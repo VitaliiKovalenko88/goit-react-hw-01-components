@@ -7,10 +7,12 @@ return (
 {title?<h2 class="title">{title}</h2>:null}
 
 <ul class="stat-list">
-  <li class="item">
-    <span class="label">.docx</span>
-    <span class="percentage">4%</span>
+  {stats.map(stat=>(
+    <li class="item" key={stat.id}>
+    <span class="label"></span>
+    <span class="percentage"></span>
   </li>
+  ) )}
 </ul>
 </section>)
 };

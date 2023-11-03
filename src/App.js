@@ -1,7 +1,7 @@
 import Profile from "./components/Profile";
 import Statistics from "./components/Statistics";
 import user from "./data/user/user.json";
-import data from "./data/data/data.json"
+import data from "./data/stats/data.json"
 
 function App() {
   return <>
