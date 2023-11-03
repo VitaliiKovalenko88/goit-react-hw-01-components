@@ -4,7 +4,6 @@ import user from "./data/user/user.json";
 import data from "./data/data/data.json"
 
 function App() {
-  console.log()
   return <>
   <Profile 
   username={user.name}
@@ -14,7 +13,7 @@ function App() {
   stats={user.stats}
   />;
   <Statistics
-  title='Upload stats'
+  title="Upload stats"
   stats={data}
   />
   </>

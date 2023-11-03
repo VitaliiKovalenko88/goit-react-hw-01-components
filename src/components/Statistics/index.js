@@ -1,9 +1,10 @@
 
 
-const Statistics = (stats) =>{
+const Statistics = ({title, stats} ) =>{
+  
 return (
 <section class="statistics">
-<h2 class="title">Upload stats</h2>
+{title?<h2 class="title">{title}</h2>:null}
 
 <ul class="stat-list">
   <li class="item">
