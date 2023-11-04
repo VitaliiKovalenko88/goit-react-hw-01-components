@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Statistics = ({ title, stats }) => {
   return (
     <section class="statistics">
@@ -16,3 +18,8 @@ const Statistics = ({ title, stats }) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
+};
