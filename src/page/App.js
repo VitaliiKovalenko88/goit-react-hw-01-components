@@ -1,7 +1,6 @@
 import Profile from "../components/Profile/Profile";
 import Statistics from "../components/Statistics/Statistics";
 import FriendList from "../components/FriendList/FriendList";
-//import FriendListItem from "./components/FriendListItem";
 import user from "../data/user/user.json";
 import data from "../data/stats/data.json";
 import friends from "../data/friends/friends.json";
