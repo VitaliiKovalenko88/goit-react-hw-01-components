@@ -17,8 +17,8 @@ const Statistics = ({ title, stats }) => {
       <ul className={css["stat-list"]}>
         {stats.map((stat) => (
           <li className={css.item} key={stat.id} style={getRandomHexColor()}>
-            <span class="label">{stat.label}</span>
-            <span class="percentage"> {stat.percentage}</span>
+            <span>{stat.label}</span>
+            <span> {stat.percentage}</span>
           </li>
         ))}
       </ul>
