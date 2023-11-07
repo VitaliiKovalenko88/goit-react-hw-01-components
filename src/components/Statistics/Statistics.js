@@ -12,13 +12,13 @@ const Statistics = ({ title, stats }) => {
 
   return (
     <section className={css.statistics}>
-      {title ? <h2 className={css.title}> {title}</h2> : null}
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css["stat-list"]}>
         {stats.map((stat) => (
           <li className={css.item} key={stat.id} style={getRandomHexColor()}>
             <span>{stat.label}</span>
-            <span> {stat.percentage}</span>
+            <span>{stat.percentage}%</span>
           </li>
         ))}
       </ul>
